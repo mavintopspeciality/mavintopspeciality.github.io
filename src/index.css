@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Inter:wght@400;600;700&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -7,24 +7,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Inter', 'Varela Round', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f7faff 0%, #e3f0ff 100%);
+  color: #1d4d85;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   border-radius: 10px;
-  overflow: hidden;
+  background: #e3f0ff;
 }
 
-/* Styles for the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #6aa6ff; /* Color of the thumb */
-  border-radius: 4px; /* Rounded corners for the thumb */
+  background-color: #6aa6ff;
+  border-radius: 4px;
 }
 
-/* Styles for the scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #a7c4ff; /* Color of the track */
+  background-color: #a7c4ff;
   border-radius: 4px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #128ef3 0%, #75c6fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.app {
+  min-width: 320px;
+  min-height: 100vh;
+  background: none;
+}
+
+button, .btn {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  outline: none;
+}
+
+button:active, .btn:active {
+  transform: scale(0.97);
+}
+
+input, textarea, select {
+  font-family: inherit;
+  border-radius: 0.5rem;
+  border: 1px solid #cfe2ff;
+  padding: 0.75rem 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #128ef3;
+  box-shadow: 0 0 0 2px #75c6fc33;
 }

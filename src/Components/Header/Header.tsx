@@ -23,18 +23,31 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`${flexBetween} ${
-        isTopOfPage ? '' : 'bg-[#84ceff]'
-      } transition fixed top-0 z-30 w-full p-1 md:px-16`}
+    <header
+      className={`backdrop-blur-md bg-white/80 border-b border-blue-100 shadow-sm ${flexBetween} ${
+        isTopOfPage ? '' : 'bg-[#e3f0ff]/90'
+      } transition fixed top-0 z-30 w-full p-2 md:px-16`}
+      aria-label="Main header"
     >
-      <img className="w-10 sm:w-20" src={Logo} alt="Logo" />
+      <a
+        href="#home"
+        className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary rounded"
+      >
+        <img
+          className="w-10 sm:w-20 drop-shadow-md"
+          src={Logo}
+          alt="Mavintop Hospital Logo"
+        />
+        <span className="font-extrabold text-xl sm:text-2xl text-gradient tracking-tight">
+          Mavintop
+        </span>
+      </a>
       <NavBar
         flexBetween={flexBetween}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-    </div>
+    </header>
   );
 };
 
