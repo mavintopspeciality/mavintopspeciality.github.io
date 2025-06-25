@@ -26,7 +26,7 @@ const Header = () => {
     <header
       className={`backdrop-blur-md bg-white/80 border-b border-blue-100 shadow-sm ${flexBetween} ${
         isTopOfPage ? '' : 'bg-[#e3f0ff]/90'
-      } transition fixed top-0 z-30 w-full p-2 md:px-16`}
+      } transition fixed top-0 z-30 w-full p-2 px-2 sm:px-4 md:px-8 lg:px-16`}
       aria-label="Main header"
     >
       <a

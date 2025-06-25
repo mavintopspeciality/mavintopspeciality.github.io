@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+// import React, { useState } from 'react};
 import hero from '@/assets/Images/Hero/hero.png';
 import hero1 from '@/assets/Images/Hero/hero1.jpg';
 import hero2 from '@/assets/Images/Hero/hero2.jpg';
@@ -103,19 +103,19 @@ const Home: React.FC = () => {
 
   return (
     <SectionWrapper id="home">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 text-center md:text-left animate-fadeInUp">
-        <div className="tracking-wider md:tracking-normal max-w-xs md:max-w-xs lg:max-w-sm flex-shrink-0 text-center md:text-left">
-          <h1 className="text-3xl lg:text-5xl font-extrabold mb-2 text-gradient drop-shadow-md">Mavintop Hospital</h1>
-          <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-primary">Maternal and Child Health | Infertility Care Unit (MICU)</h2>
-          <h3 className="text-lg lg:text-xl font-medium mb-4 text-gray-700">Where Every Life Begins with Care and Compassion</h3>
-          <p className="text-sm lg:text-base my-4 text-gray-800">Dedicated to excellence in maternal, child, and infertility care, empowering families with advanced medical expertise and unwavering compassion.</p>
-          <a href="#contact" className="inline-block mt-2 px-6 py-2 bg-primary text-white rounded-full shadow-lg hover:bg-[#158ace] transition-all duration-300 text-sm lg:text-base font-semibold focus:outline-none focus:ring-2 focus:ring-primary">Contact Us</a>
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 text-center md:text-left animate-fadeInUp">
+        <div className="tracking-wider md:tracking-normal w-full max-w-full md:max-w-xs lg:max-w-sm flex-shrink-0 text-center md:text-left px-2 sm:px-4 md:px-0">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold mb-2 text-gradient drop-shadow-md">Mavintop Hospital</h1>
+          <h2 className="text-base sm:text-xl lg:text-2xl font-semibold mb-2 text-primary">Maternal and Child Health | Infertility Care Unit (MICU)</h2>
+          <h3 className="text-sm sm:text-lg lg:text-xl font-medium mb-4 text-gray-700">Where Every Life Begins with Care and Compassion</h3>
+          <p className="text-xs sm:text-sm lg:text-base my-4 text-gray-800">Dedicated to excellence in maternal, child, and infertility care, empowering families with advanced medical expertise and unwavering compassion.</p>
+          <a href="#contact" className="inline-block mt-2 px-6 py-2 bg-primary text-white rounded-full shadow-lg hover:bg-[#158ace] transition-all duration-300 text-xs sm:text-sm lg:text-base font-semibold focus:outline-none focus:ring-2 focus:ring-primary">Contact Us</a>
         </div>
         <div
           ref={sliderRef}
-          className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto animate-fadeIn"
+          className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto animate-fadeIn min-h-[180px] sm:min-h-[220px] md:min-h-0"
         >
-          <div className="overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] bg-gray-100 cursor-pointer group" onClick={() => openLightbox(currentSlide)}>
+          <div className="overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] bg-gray-100 cursor-pointer group min-h-[180px] sm:min-h-[220px]" onClick={() => openLightbox(currentSlide)}>
             {heroImages.map((img, idx) => (
               <img
                 key={idx}
@@ -127,16 +127,16 @@ const Home: React.FC = () => {
             ))}
             {/* Overlay for click hint */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 z-20">
-              <span className="text-white text-lg font-semibold bg-black/50 rounded px-4 py-2">Click to view full screen</span>
+              <span className="text-white text-xs sm:text-lg font-semibold bg-black/50 rounded px-2 sm:px-4 py-1 sm:py-2">Click to view full screen</span>
             </div>
           </div>
           {/* Slide Indicators */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2 z-20">
             {heroImages.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => goToSlide(idx)}
-                className={`w-3 h-3 rounded-full border-2 border-white transition-all duration-200 ${idx === currentSlide ? 'bg-blue-500 scale-125 shadow' : 'bg-white/70 hover:bg-blue-200'}`}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full border-2 border-white transition-all duration-200 ${idx === currentSlide ? 'bg-blue-500 scale-110 sm:scale-125 shadow' : 'bg-white/70 hover:bg-blue-200'}`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
@@ -180,15 +180,15 @@ const Home: React.FC = () => {
           )}
         </div>
       </div>
-      <div className="bg-white/90 p-10 rounded-2xl shadow-xl max-w-4xl mx-auto text-center mt-12 animate-fadeIn">
-        <h5 className="text-4xl font-extrabold mb-6 text-gradient drop-shadow-md">{AboutUsData.heading}</h5>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-800">
+      <div className="bg-white/90 p-4 sm:p-8 md:p-10 rounded-2xl shadow-xl max-w-4xl mx-auto text-center mt-8 sm:mt-12 animate-fadeIn">
+        <h5 className="text-2xl sm:text-4xl font-extrabold mb-4 sm:mb-6 text-gradient drop-shadow-md">{AboutUsData.heading}</h5>
+        <p className="text-sm sm:text-lg md:text-xl leading-relaxed text-gray-800">
           <span className="font-semibold text-primary">Mavintop Hospital</span> is a speciality hospital dedicated to women's health, maternal and child health, established in 2010. We provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART Treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care (maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU (24X7) & NICU, postnatal care, family planning services.
         </p>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
+        <p className="text-sm sm:text-lg md:text-xl leading-relaxed text-gray-800 mt-2 sm:mt-4">
           Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries.
         </p>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
+        <p className="text-sm sm:text-lg md:text-xl leading-relaxed text-gray-800 mt-2 sm:mt-4">
           Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.
         </p>
       </div>
