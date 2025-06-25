@@ -103,27 +103,17 @@ const Home: React.FC = () => {
 
   return (
     <SectionWrapper id="home">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 text-center md:text-left">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 text-center md:text-left animate-fadeInUp">
         <div className="tracking-wider md:tracking-normal max-w-xs md:max-w-xs lg:max-w-sm flex-shrink-0 text-center md:text-left">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-2 text-gradient">
-            Mavintop Hospital
-          </h1>
-          <h2 className="text-xl lg:text-2xl font-semibold mb-2">
-            Maternal and Child Health | Infertility Care Unit (MICU)
-          </h2>
-          <h3 className="text-lg lg:text-xl font-medium mb-4">
-            Where Every Life Begins with Care and Compassion
-          </h3>
-          <p className="text-sm lg:text-base my-4">
-            Dedicated to excellence in maternal, child, and infertility care, empowering families with advanced medical expertise and unwavering compassion.
-          </p>
-          <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 text-sm lg:text-base">
-            <a href="#contact" className="hover:text-gray-300 transition-colors duration-200">Contact Us</a>
-          </button>
+          <h1 className="text-3xl lg:text-5xl font-extrabold mb-2 text-gradient drop-shadow-md">Mavintop Hospital</h1>
+          <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-primary">Maternal and Child Health | Infertility Care Unit (MICU)</h2>
+          <h3 className="text-lg lg:text-xl font-medium mb-4 text-gray-700">Where Every Life Begins with Care and Compassion</h3>
+          <p className="text-sm lg:text-base my-4 text-gray-800">Dedicated to excellence in maternal, child, and infertility care, empowering families with advanced medical expertise and unwavering compassion.</p>
+          <a href="#contact" className="inline-block mt-2 px-6 py-2 bg-primary text-white rounded-full shadow-lg hover:bg-[#158ace] transition-all duration-300 text-sm lg:text-base font-semibold focus:outline-none focus:ring-2 focus:ring-primary">Contact Us</a>
         </div>
         <div
           ref={sliderRef}
-          className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto"
+          className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto animate-fadeIn"
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] bg-gray-100 cursor-pointer group" onClick={() => openLightbox(currentSlide)}>
             {heroImages.map((img, idx) => (
@@ -190,20 +180,18 @@ const Home: React.FC = () => {
           )}
         </div>
       </div>
-      <div className="bg-white p-10 rounded-lg shadow-lg max-w-4xl mx-auto text-center mt-12">
-  <h5 className="text-4xl font-extrabold mb-6 text-gradient">
-    {AboutUsData.heading}
-  </h5>
-  <p className="text-lg md:text-xl leading-relaxed text-gray-800">
-    <span className="font-semibold text-primary">Mavintop Hospital</span> is a speciality hospital dedicated to women's health, maternal and child health, established in 2010. We provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART Treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care (maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU (24X7) & NICU, postnatal care, family planning services.
-  </p>
-  <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
-    Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries.
-  </p>
-  <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
-    Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.
-  </p>
-</div>
+      <div className="bg-white/90 p-10 rounded-2xl shadow-xl max-w-4xl mx-auto text-center mt-12 animate-fadeIn">
+        <h5 className="text-4xl font-extrabold mb-6 text-gradient drop-shadow-md">{AboutUsData.heading}</h5>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-800">
+          <span className="font-semibold text-primary">Mavintop Hospital</span> is a speciality hospital dedicated to women's health, maternal and child health, established in 2010. We provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART Treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care (maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU (24X7) & NICU, postnatal care, family planning services.
+        </p>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
+          Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries.
+        </p>
+        <p className="text-lg md:text-xl leading-relaxed text-gray-800 mt-4">
+          Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.
+        </p>
+      </div>
       {/* <Appointment isOpen={isAppointmentOpen} onClose={closeAppointment} /> */}
     </SectionWrapper>
   );
