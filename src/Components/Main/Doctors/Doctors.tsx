@@ -5,26 +5,24 @@ import Doctor from './Doctor';
 const Doctors = () => {
   return (
     <SectionWrapper id="doctors">
-      <h3 className="text-4xl font-bold text-center mb-20">
+      <h3 className="text-4xl font-extrabold text-center mb-20 text-gradient drop-shadow-md animate-fadeIn">
         {DoctorsData.heading}
       </h3>
-      <div className="flex flex-wrap justify-center gap-10 px-5 md:px-0">
+      <div className="flex flex-wrap justify-center gap-10 px-5 md:px-0 animate-fadeInUp">
         {DoctorsData.doctors.map((doctor, index) => (
           <div
             key={index}
-            className="p-5 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-xs"
+            className="p-5 border border-blue-100 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 max-w-xs bg-white/90"
           >
             <Doctor doc={doctor} />
           </div>
         ))}
       </div>
-      {/* <h4 className="text-3xl tracking-wider font-bold text-center my-10 md:mt-20">
-        {DoctorsData.heading2}
-      </h4>
-      <div className="mb-5 m-auto text-center max-w-2xl text-xs sm:text-base md:text-lg">
-        {DoctorsData.desc}
-      </div> */}
-      <img className="m-auto max-w-full h-auto" src={DoctorsData.img} alt="Doctors" />
+      <img
+        className="m-auto max-w-full h-auto mt-12 rounded-2xl shadow-lg animate-fadeIn"
+        src={DoctorsData.img}
+        alt="Doctors"
+      />
     </SectionWrapper>
   );
 };

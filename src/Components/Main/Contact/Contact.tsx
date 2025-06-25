@@ -5,11 +5,11 @@ import SectionWrapper from '../SectionWrapper';
 const Contact: React.FC = () => {
     return (
         <SectionWrapper id="contact">
-        <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-            <div className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Timings and Holidays</h2>
-                <ul className="list-disc list-inside space-y-2 pl-5">
+        <div className="container mx-auto p-6 animate-fadeInUp">
+            <h1 className="text-3xl font-extrabold mb-6 text-center text-gradient drop-shadow-md">Contact Us</h1>
+            <div className="mb-8 bg-white/90 rounded-2xl shadow-xl p-6">
+                <h2 className="text-2xl font-bold mb-4 text-primary">Timings and Holidays</h2>
+                <ul className="list-disc list-inside space-y-2 pl-5 text-gray-800">
                     <li><strong>Neonatal and pediatric OPD:</strong> {timingsAndHolidays.neonatalPediatricOPD}</li>
                     <li><strong>Obstetrics and gynaecology OPD:</strong> {timingsAndHolidays.obstetricsGynecologyOPD}</li>
                     <li><strong>Sunday:</strong> {timingsAndHolidays.sunday}</li>
@@ -18,15 +18,15 @@ const Contact: React.FC = () => {
                     <li><strong>For Appointments:</strong> {timingsAndHolidays.appointmentsOnSpot}</li>
                     <li><strong>For Appointments over Phone:</strong> {timingsAndHolidays.appointmentsPhone}</li>
                 </ul>
-                <p className="mt-4"><strong>Email:</strong> {timingsAndHolidays.email}</p>
-                <p className="mt-4"><strong>Contact:</strong> {timingsAndHolidays.contact}</p>
+                <p className="mt-4 text-gray-800"><strong>Email:</strong> {timingsAndHolidays.email}</p>
+                <p className="mt-4 text-gray-800"><strong>Contact:</strong> {timingsAndHolidays.contact}</p>
             </div>
-            <div className="my-8 px-4">
-                <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">Our Location</h2>
-                <div className="relative overflow-hidden rounded-lg shadow-lg border border-gray-200" style={{ paddingTop: '56.25%' }}>
+            <div className="my-8 px-4 animate-fadeIn">
+                <h2 className="text-2xl font-bold mb-4 text-center text-primary">Our Location</h2>
+                <div className="relative overflow-hidden rounded-2xl shadow-lg border border-blue-100" style={{ paddingTop: '56.25%' }}>
                     <iframe 
                         src={googleMapUrl} 
-                        className="absolute top-0 left-0 w-full h-full" 
+                        className="absolute top-0 left-0 w-full h-full rounded-2xl" 
                         style={{ border: 0 }} 
                         allowFullScreen={true} 
                         loading="lazy" 
