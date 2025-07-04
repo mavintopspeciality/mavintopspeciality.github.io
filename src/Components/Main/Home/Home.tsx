@@ -151,13 +151,13 @@ const Home: React.FC = () => {
             {/* Lightbox Overlay */}
             {isLightboxOpen && (
               <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 transition-all animate-fadeIn"
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
                 onClick={closeLightbox}
                 tabIndex={-1}
               >
                 <button
                   onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
-                  className="absolute top-6 right-8 text-white text-4xl font-bold bg-black/40 rounded-full p-2 hover:bg-black/70 transition-all z-60"
+                  className="absolute top-6 right-8 text-white text-4xl font-bold bg-black/40 rounded-full p-2 hover:bg-black/70 z-60"
                   aria-label="Close"
                 >
                   &times;
@@ -167,7 +167,8 @@ const Home: React.FC = () => {
                     e.stopPropagation();
                     setLightboxIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
                   }}
-                  className="absolute left-8 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 z-60"
+                  className="absolute left-8 top-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 z-60"
+                  style={{ transform: 'translateY(-50%)', transition: 'none' }}
                   aria-label="Previous image"
                   tabIndex={0}
                   type="button"
@@ -178,7 +179,7 @@ const Home: React.FC = () => {
                   ref={lightboxImgRef}
                   src={heroImages[lightboxIndex]}
                   alt={`hero${lightboxIndex}`}
-                  className="max-h-[95vh] max-w-[98vw] rounded-2xl shadow-2xl object-contain transition-all bg-white"
+                  className="max-h-[95vh] max-w-[98vw] rounded-2xl shadow-2xl object-contain bg-white"
                   onClick={e => e.stopPropagation()}
                   tabIndex={0}
                 />
@@ -187,7 +188,8 @@ const Home: React.FC = () => {
                     e.stopPropagation();
                     setLightboxIndex((prev) => (prev + 1) % totalSlides);
                   }}
-                  className="absolute right-8 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 z-60"
+                  className="absolute right-8 top-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 z-60"
+                  style={{ transform: 'translateY(-50%)', transition: 'none' }}
                   aria-label="Next image"
                   tabIndex={0}
                   type="button"
