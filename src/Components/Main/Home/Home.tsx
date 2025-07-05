@@ -105,8 +105,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Home | Mavintop Hospital</title>
-        <meta name="description" content="Welcome to Mavintop Hospital, Davanagere. Maternal & child health, infertility, gynecology, pediatrics, and advanced care." />
+        <title>Mavintop | Mavintop Hospital Davanagere - Maternal & Child Health, Infertility Care</title>
+        <meta name="description" content="Mavintop Hospital (mavintop) in Davanagere, Karnataka, is the top choice for maternal and child health, infertility care, gynecology, pediatrics, and advanced medical services. Trusted since 2010. Visit https://www.mavintophospital.com/ for the best care." />
         <meta name="robots" content="index, follow" />
       </Helmet>
       <SectionWrapper id="home">

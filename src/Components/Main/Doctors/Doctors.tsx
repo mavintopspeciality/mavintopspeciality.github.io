@@ -7,8 +7,8 @@ const Doctors = () => {
   return (
     <>
       <Helmet>
-        <title>Doctors | Mavintop Hospital</title>
-        <meta name="description" content="Meet the doctors at Mavintop Hospital, Davanagere. Specialists in maternal & child health, infertility, gynecology, pediatrics, and advanced care." />
+        <title>Mavintop | Mavintop Hospital Davanagere - Maternal & Child Health, Infertility Care</title>
+        <meta name="description" content="Mavintop Hospital (mavintop) in Davanagere, Karnataka, is the top choice for maternal and child health, infertility care, gynecology, pediatrics, and advanced medical services. Trusted since 2010. Visit https://www.mavintophospital.com/ for the best care." />
         <meta name="robots" content="index, follow" />
       </Helmet>
       <SectionWrapper id="doctors">

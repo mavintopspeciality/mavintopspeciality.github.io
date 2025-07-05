@@ -7,8 +7,8 @@ const Reviews = () => {
   return (
     <>
       <Helmet>
-        <title>Reviews | Mavintop Hospital</title>
-        <meta name="description" content="Patient reviews for Mavintop Hospital, Davanagere. Read feedback on maternal & child health, infertility, gynecology, pediatrics, and advanced care." />
+        <title>Mavintop | Mavintop Hospital Davanagere - Maternal & Child Health, Infertility Care</title>
+        <meta name="description" content="Mavintop Hospital (mavintop) in Davanagere, Karnataka, is the top choice for maternal and child health, infertility care, gynecology, pediatrics, and advanced medical services. Trusted since 2010. Visit https://www.mavintophospital.com/ for the best care." />
         <meta name="robots" content="index, follow" />
       </Helmet>
       <SectionWrapper id="reviews">
